@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gjq-0625.github.io</id>
     <title>锦旗飘飘的私人笔记</title>
-    <updated>2020-12-11T14:09:15.784Z</updated>
+    <updated>2020-12-11T14:17:25.180Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gjq-0625.github.io"/>
     <link rel="self" href="https://gjq-0625.github.io/atom.xml"/>
@@ -61,15 +61,24 @@ x --	后递减	返回 x，然后 x 减 1
 <h2>5.PHP 比较运算符</h2>
 比较操作符可以让您比较两个值：
 <p>运算符	名称	描述	实例<br>
-x == y	等于	如果 x 等于 y，则返回 true	5<mark>8 返回 false<br>
-x === y	恒等于	如果 x 等于 y，且它们类型相同，则返回 true	5</mark>=&quot;5&quot; 返回 false<br>
-x != y	不等于	如果 x 不等于 y，则返回 true	5!=8 返回 true<br>
-x &lt;&gt; y	不等于	如果 x 不等于 y，则返回 true	5&lt;&gt;8 返回 true<br>
-x !== y	不恒等于	如果 x 不等于 y，或它们类型不相同，则返回 true	5!==&quot;5&quot; 返回 true<br>
-x &gt; y	大于	如果 x 大于 y，则返回 true	5&gt;8 返回 false<br>
-x &lt; y	小于	如果 x 小于 y，则返回 true	5&lt;8 返回 true<br>
-x &gt;= y	大于等于	如果 x 大于或者等于 y，则返回 true	5&gt;=8 返回 false<br>
-x &lt;= y	小于等于	如果 x 小于或者等于 y，则返回 true	5&lt;=8 返回 true</p>
+x == y	等于	如果 x 等于 y，则返回 true;	<br>
+5<mark>8 返回 false<br>
+x === y	恒等于	如果 x 等于 y，且它们类型相同，则返回 true;<br>
+5</mark>=&quot;5&quot; 返回 false<br>
+x != y	不等于	如果 x 不等于 y，则返回 true;<br>
+5!=8 返回 true<br>
+x &lt;&gt; y	不等于	如果 x 不等于 y，则返回 true;	<br>
+5&lt;&gt;8 返回 true<br>
+x !== y	不恒等于	如果 x 不等于 y，或它们类型不相同，则返回 true;<br>
+5!==&quot;5&quot; 返回 true<br>
+x &gt; y	大于	如果 x 大于 y，则返回 true;	<br>
+5&gt;8 返回 false<br>
+x &lt; y	小于	如果 x 小于 y，则返回 true;	<br>
+5&lt;8 返回true<br>
+x &gt;= y	大于等于	如果 x 大于或者等于 y，则返回 true;	<br>
+5&gt;=8 返回 false<br>
+x &lt;= y	小于等于	如果 x 小于或者等于 y，则返回 true;	<br>
+5&lt;=8 返回 true</p>
 <h2>6.PHP 逻辑运算符</h2>
 运算符	名称	描述	实例
 <p>x and y	与	如果 x 和 y 都为 true，则返回 true；	<br>
@@ -98,12 +107,12 @@ y=3<br>
 !(x==y) 返回 true</p>
 <h2>7.PHP 数组运算符</h2>
 运算符	名称	描述
-x + y	集合	x 和 y 的集合
-x == y	相等	如果 x 和 y 具有相同的键/值对，则返回 true
-x === y	恒等	如果 x 和 y 具有相同的键/值对，且顺序相同类型相同，则返回 true
-x != y	不相等	如果 x 不等于 y，则返回 true
-x <> y	不相等	如果 x 不等于 y，则返回 true
-x !== y	不恒等	如果 x 不等于 y，则返回 true
+x + y	集合	x 和 y 的集合;
+x == y	相等	如果 x 和 y 具有相同的键/值对，则返回 true;
+x === y	恒等	如果 x 和 y 具有相同的键/值对，且顺序相同类型相同，则返回 true;
+x != y	不相等	如果 x 不等于 y，则返回 true;
+x <> y	不相等	如果 x 不等于 y，则返回 true;
+x !== y	不恒等	如果 x 不等于 y，则返回 true;
 ]]></content>
     </entry>
     <entry>
