@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gjq-0625.github.io</id>
     <title>锦旗飘飘的私人笔记</title>
-    <updated>2020-12-11T06:21:19.345Z</updated>
+    <updated>2020-12-11T14:09:15.784Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gjq-0625.github.io"/>
     <link rel="self" href="https://gjq-0625.github.io/atom.xml"/>
@@ -16,16 +16,16 @@
         <link href="https://gjq-0625.github.io/post/first-php-study/">
         </link>
         <updated>2020-12-11T04:55:30.000Z</updated>
-        <content type="html"><![CDATA[<p>1.换行时应该用<br>
-/<em>&lt;?php<br>
-echo &lt;.br/&gt;;<br>
-echo 'Test'.'&lt;.br/&gt;';<br>
-&quot;.&quot;这个符号是用来连接字符串的<br>
-echo 'one';<br>
-echo '&lt;.br/&gt;';<br>
-?&gt;</em>/<br>
-2.当希望某个局部变量不要被删除时需要用到static修饰函数中的变量<br>
-/*&lt;?php</p>
+        <content type="html"><![CDATA[<h2>1.换行时应该用</h2>
+/*<?php
+echo <.br/>;
+echo 'Test'.'<.br/>'; 
+ "."这个符号是用来连接字符串的
+echo 'one';
+echo '<.br/>'; 
+?>*/
+<h2>2.当希望某个局部变量不要被删除时需要用到static修饰函数中的变量</h2>
+/*<?php
 <p>function myTest(){<br>
 static $x=0;<br>
 echo <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">x;
@@ -39,9 +39,9 @@ myTest();<br>
 //输出：2<br>
 myTest();<br>
 //输出：3<br>
-?&gt;*/<br>
-3.输出echo，print<br>
-在 PHP 中有两个基本的输出方式： echo 和 print。</p>
+?&gt;*/</p>
+<h2>3.输出echo，print，print_r</h2>
+在 PHP 中有两个基本的输出方式： echo 和 print。
 <p>本章节中我们会详细讨论两个语句的用法，并在实例中演示如何使用 echo 和 print。</p>
 <p>PHP echo ,print 和 print_r 语句<br>
 echo , print 和 print_r的区别:</p>
@@ -49,7 +49,61 @@ echo , print 和 print_r的区别:</p>
 print   - 只能输出简单类型变量的值,如int,string<br>
 print_r - 可以输出复杂类型变量的值,如数组,对象<br>
 提示：echo输出的速度比print快,echo是PHP语句,没有返回值,print和print_r是PHP函数,函数有返回值。<br>
-print返回值为1(int类型),print_r返回值为true(bool类型)。</p>
+print返回值为1(int类型),print_r返回值为true(bool类型)。<br>
+print_r在输出String,integer,float将打印本身，如果给出的是array将会以一定格式输出<br>
+eg：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mi>a</mi><mi>r</mi><mi>s</mi><mo>=</mo><mi>a</mi><mi>r</mi><mi>r</mi><mi>a</mi><mi>y</mi><mo>(</mo><mi mathvariant="normal">&quot;</mi><mi>b</mi><mi>w</mi><mi>m</mi><mi mathvariant="normal">&quot;</mi><mo separator="true">,</mo><mi mathvariant="normal">&quot;</mi><mi>a</mi><mi>o</mi><mi>d</mi><mi>i</mi><mi mathvariant="normal">&quot;</mi><mo separator="true">,</mo><mi mathvariant="normal">&quot;</mi><mi>m</mi><mi>u</mi><mi>s</mi><mi>t</mi><mi>a</mi><mi>n</mi><mi>g</mi><mi mathvariant="normal">&quot;</mi><mo separator="true">,</mo><mi mathvariant="normal">&quot;</mi><mi>t</mi><mi>o</mi><mi>y</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi mathvariant="normal">&quot;</mi><mo>)</mo><mo separator="true">;</mo><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><msub><mi>t</mi><mi>r</mi></msub><mo>(</mo></mrow><annotation encoding="application/x-tex">cars=array(&quot;bwm&quot;,&quot;aodi&quot;,&quot;mustang&quot;,&quot;toyota&quot;);
+        print_r(</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord mathdefault">b</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">m</span><span class="mord">&quot;</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">&quot;</span><span class="mord mathdefault">a</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord">&quot;</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">&quot;</span><span class="mord mathdefault">m</span><span class="mord mathdefault">u</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord">&quot;</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">&quot;</span><span class="mord mathdefault">t</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord mathdefault">o</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord">&quot;</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span></span></span></span>cars);//Array ( [0] =&gt; bwm [1] =&gt; aodi [2] =&gt; mustang [3] =&gt; toyota )</p>
+<h2>4.运算符	名称	描述</h2>
+++ x	预递增	x 加 1，然后返回 x
+x ++	后递增	返回 x，然后 x 加 1
+-- x	预递减	x 减 1，然后返回 x
+x --	后递减	返回 x，然后 x 减 1
+<h2>5.PHP 比较运算符</h2>
+比较操作符可以让您比较两个值：
+<p>运算符	名称	描述	实例<br>
+x == y	等于	如果 x 等于 y，则返回 true	5<mark>8 返回 false<br>
+x === y	恒等于	如果 x 等于 y，且它们类型相同，则返回 true	5</mark>=&quot;5&quot; 返回 false<br>
+x != y	不等于	如果 x 不等于 y，则返回 true	5!=8 返回 true<br>
+x &lt;&gt; y	不等于	如果 x 不等于 y，则返回 true	5&lt;&gt;8 返回 true<br>
+x !== y	不恒等于	如果 x 不等于 y，或它们类型不相同，则返回 true	5!==&quot;5&quot; 返回 true<br>
+x &gt; y	大于	如果 x 大于 y，则返回 true	5&gt;8 返回 false<br>
+x &lt; y	小于	如果 x 小于 y，则返回 true	5&lt;8 返回 true<br>
+x &gt;= y	大于等于	如果 x 大于或者等于 y，则返回 true	5&gt;=8 返回 false<br>
+x &lt;= y	小于等于	如果 x 小于或者等于 y，则返回 true	5&lt;=8 返回 true</p>
+<h2>6.PHP 逻辑运算符</h2>
+运算符	名称	描述	实例
+<p>x and y	与	如果 x 和 y 都为 true，则返回 true；	<br>
+x=6<br>
+y=3<br>
+(x &lt; 10 and y &gt; 1) 返回 true<br>
+x or y	或	如果 x 和 y 至少有一个为 true，则返回 true	；<br>
+x=6<br>
+y=3<br>
+(x<mark>6 or y</mark>5) 返回 true<br>
+x xor y	异或	如果 x 和 y 有且仅有一个为 true，则返回 true；	<br>
+x=6<br>
+y=3<br>
+(x<mark>6 xor y</mark>3) 返回 false<br>
+x &amp;&amp; y	与	如果 x 和 y 都为 true，则返回 true	；<br>
+x=6<br>
+y=3<br>
+(x &lt; 10 &amp;&amp; y &gt; 1) 返回 true<br>
+x || y	或	如果 x 和 y 至少有一个为 true，则返回 true ；	<br>
+x=6<br>
+y=3<br>
+(x<mark>5 || y</mark>5) 返回 false<br>
+! x	非	如果 x 不为 true，则返回 true ；<br>
+x=6<br>
+y=3<br>
+!(x==y) 返回 true</p>
+<h2>7.PHP 数组运算符</h2>
+运算符	名称	描述
+x + y	集合	x 和 y 的集合
+x == y	相等	如果 x 和 y 具有相同的键/值对，则返回 true
+x === y	恒等	如果 x 和 y 具有相同的键/值对，且顺序相同类型相同，则返回 true
+x != y	不相等	如果 x 不等于 y，则返回 true
+x <> y	不相等	如果 x 不等于 y，则返回 true
+x !== y	不恒等	如果 x 不等于 y，则返回 true
 ]]></content>
     </entry>
     <entry>
