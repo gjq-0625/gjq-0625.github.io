@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gjq-0625.github.io</id>
     <title>锦旗飘飘的私人笔记</title>
-    <updated>2020-12-11T05:00:25.258Z</updated>
+    <updated>2020-12-11T06:12:26.159Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gjq-0625.github.io"/>
     <link rel="self" href="https://gjq-0625.github.io/atom.xml"/>
@@ -16,22 +16,40 @@
         <link href="https://gjq-0625.github.io/post/first-php-study/">
         </link>
         <updated>2020-12-11T04:55:30.000Z</updated>
-        <content type="html"><![CDATA[<p>换行时应该用</p>
-<?php
-echo <br/>;
-echo "Test"."<br/>"; 
-// "."这个符号是用来连接字符串的
-echo "one";
-echo "<br/>"; 
-?>]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[刘爷全会]]></title>
-        <id>https://gjq-0625.github.io/post/liu-ye-quan-hui/</id>
-        <link href="https://gjq-0625.github.io/post/liu-ye-quan-hui/">
-        </link>
-        <updated>2020-12-10T12:08:03.000Z</updated>
-        <content type="html"><![CDATA[<p>优秀是一种习惯</p>
+        <content type="html"><![CDATA[<p>1.换行时应该用<br>
+/<em>&lt;?php<br>
+echo &lt;.br/&gt;;<br>
+echo 'Test'.'&lt;.br/&gt;';<br>
+&quot;.&quot;这个符号是用来连接字符串的<br>
+echo 'one';<br>
+echo '&lt;.br/&gt;';<br>
+?&gt;</em>/<br>
+2.当希望某个局部变量不要被删除时需要用到static修饰函数中的变量<br>
+/*&lt;?php</p>
+<p>function myTest(){<br>
+static $x=0;<br>
+echo <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">x;
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">x</span><span class="mpunct">;</span></span></span></span>x++;<br>
+}</p>
+<p>myTest();<br>
+//输出：0<br>
+myTest();<br>
+//输出：1<br>
+myTest();<br>
+//输出：2<br>
+myTest();<br>
+//输出：3<br>
+?&gt;*/<br>
+3.输出echo，print<br>
+在 PHP 中有两个基本的输出方式： echo 和 print。</p>
+<p>本章节中我们会详细讨论两个语句的用法，并在实例中演示如何使用 echo 和 print。</p>
+<p>PHP echo ,print 和 print_r 语句<br>
+echo , print 和 print_r的区别:</p>
+<p>echo   - 可以输出一个或多个字符串<br>
+print   - 只能输出简单类型变量的值,如int,string<br>
+print_r - 可以输出复杂类型变量的值,如数组,对象<br>
+提示：echo输出的速度比print快,echo是PHP语句,没有返回值,print和print_r是PHP函数,函数有返回值。<br>
+print返回值为1(int类型),print_r返回值为true(bool类型)。</p>
 ]]></content>
     </entry>
     <entry>
