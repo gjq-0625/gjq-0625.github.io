@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://gjq-0625.github.io/favicon.ico?v=1607698181447">
+<link rel="shortcut icon" href="https://gjq-0625.github.io/favicon.ico?v=1607784683847">
 <link rel="stylesheet" href="https://gjq-0625.github.io/styles/main.css">
 
 
@@ -42,7 +42,7 @@ echo '';
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://gjq-0625.github.io">
-        <img src="https://gjq-0625.github.io/images/avatar.png?v=1607698181447" class="site-logo">
+        <img src="https://gjq-0625.github.io/images/avatar.png?v=1607784683847" class="site-logo">
         <h1 class="site-title">锦旗飘飘的私人笔记</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -167,7 +167,7 @@ x !== y	不恒等于	如果 x 不等于 y，或它们类型不相同，则返回
 x &gt; y	大于	如果 x 大于 y，则返回 true;	<br>
 5&gt;8 返回 false<br>
 x &lt; y	小于	如果 x 小于 y，则返回 true;	<br>
-5&lt;8 返回true<br>
+5&lt; 8 返回 true<br>
 x &gt;= y	大于等于	如果 x 大于或者等于 y，则返回 true;	<br>
 5&gt;=8 返回 false<br>
 x &lt;= y	小于等于	如果 x 小于或者等于 y，则返回 true;	<br>
@@ -206,6 +206,55 @@ x === y	恒等	如果 x 和 y 具有相同的键/值对，且顺序相同类型�
 x != y	不相等	如果 x 不等于 y，则返回 true;
 x <> y	不相等	如果 x 不等于 y，则返回 true;
 x !== y	不恒等	如果 x 不等于 y，则返回 true;
+<h2>8.constant,static</h2>
+1.在访问PHP类中的成员变量或方法时，如果被引用的变量或者方法被声明成const（定义常量）或者static（声明静态）,那么就必须使用操作符::,反之如果被引用的变量或者方法没有被声明成const或者static,那么就必须使用操作符->。
+<p>另外，如果从类的内部访问const或者static变量或者方法,那么就必须使用自引用的self，反之如果从类的内部访问不为const或者static变量或者方法,那么就必须使用自引用的$this。<br>
+(1)constant关键字<br>
+eg:/*&lt;?php<br>
+class MyClass<br>
+{<br>
+const constant = '常量值';</p>
+<pre><code> function showConstant() {
+    echo  self::constant . PHP_EOL;
+ }
+</code></pre>
+<p>}</p>
+<p>echo MyClass::constant . PHP_EOL;</p>
+<p>$classname = &quot;MyClass&quot;;<br>
+echo $classname::constant . PHP_EOL; // 自 5.3.0 起</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mi>l</mi><mi>a</mi><mi>s</mi><mi>s</mi><mo>=</mo><mi>n</mi><mi>e</mi><mi>w</mi><mi>M</mi><mi>y</mi><mi>C</mi><mi>l</mi><mi>a</mi><mi>s</mi><mi>s</mi><mo>(</mo><mo>)</mo><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">class = new MyClass();
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mclose">)</span><span class="mpunct">;</span></span></span></span>class-&gt;showConstant();</p>
+<p>echo $class::constant . PHP_EOL; // 自 PHP 5.3.0 起<br>
+?&gt;<em>/<br>
+(2)static关键字<br>
+/</em>&lt;?php<br>
+class Foo {<br>
+public static $my_static = 'foo';</p>
+<p>public function staticValue() {<br>
+return self::$my_static;<br>
+}<br>
+}</p>
+<p>print Foo::<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><msub><mi>y</mi><mi>s</mi></msub><mi>t</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>c</mi><mi mathvariant="normal">.</mi><mi>P</mi><mi>H</mi><msub><mi>P</mi><mi>E</mi></msub><mi>O</mi><mi>L</mi><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">my_static . PHP_EOL;
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">m</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault">c</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05764em;">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault">L</span><span class="mpunct">;</span></span></span></span>foo = new Foo();</p>
+<p>print $foo-&gt;staticValue() . PHP_EOL;<br>
+?&gt;	<br>
+执行以上程序，输出结果为：</p>
+<p>foo<br>
+foo<br>
+*/</p>
+<h2>9.抽象类</h2>
+任何一个类，如果它里面至少有一个方法是被声明为抽象的，那么这个类就必须被声明为抽象的。
+<p>定义为抽象的类不能被实例化。</p>
+<p>被定义为抽象的方法只是声明了其调用方式（参数），不能定义其具体的功能实现。</p>
+<p>继承一个抽象类的时候，子类必须定义父类中的所有抽象方法；另外，这些方法的访问控制必须和父类中一样（或者更为宽松）。例如某个抽象方法被声明为受保护的，那么子类中实现的方法就应该声明为受保护的或者公有的，而不能定义为私有的。<br>
+<img src="https://gjq-0625.github.io/post-images/1607784651775.jpg" alt="" loading="lazy"><br>
+<img src="https://gjq-0625.github.io/post-images/1607784673042.jpg" alt="" loading="lazy"><br>
+<img src="https://gjq-0625.github.io/post-images/1607784681109.jpg" alt="" loading="lazy"></p>
+<h2>10.接口</h2>
+使用接口（interface），可以指定某个类必须实现哪些方法，但不需要定义这些方法的具体内容。
+<p>接口是通过 interface 关键字来定义的，就像定义一个标准的类一样，但其中定义所有的方法都是空的。</p>
+<p>接口中定义的所有方法都必须是公有，这是接口的特性。</p>
+<p>要实现一个接口，使用 implements 操作符。类中必须实现接口中定义的所有方法，否则会报一个致命错误。类可以实现多个接口，用逗号来分隔多个接口的名称</p>
 
             </div>
             
