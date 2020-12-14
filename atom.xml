@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gjq-0625.github.io</id>
     <title>锦旗飘飘的私人笔记</title>
-    <updated>2020-12-14T13:59:31.012Z</updated>
+    <updated>2020-12-14T14:01:38.347Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gjq-0625.github.io"/>
     <link rel="self" href="https://gjq-0625.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://gjq-0625.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 锦旗飘飘的私人笔记</rights>
     <entry>
-        <title type="html"><![CDATA[ First php study]]></title>
+        <title type="html"><![CDATA[php study ]]></title>
         <id>https://gjq-0625.github.io/post/first-php-study/</id>
         <link href="https://gjq-0625.github.io/post/first-php-study/">
         </link>
@@ -26,13 +26,13 @@ echo '<.br/>';
 ?>*/
 <h2>2.当希望某个局部变量不要被删除时需要用到static修饰函数中的变量</h2>
 /*
-//<?
-//php
-//function myTest(){
-//static $x=0;
-//echo $x;
-//$x++;
-//}
+<?
+php
+function myTest(){
+static $x=0;
+echo $x;
+$x++;
+}
 <p>myTest();<br>
 //输出：0<br>
 myTest();<br>
