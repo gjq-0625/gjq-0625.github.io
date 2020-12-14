@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gjq-0625.github.io</id>
     <title>锦旗飘飘的私人笔记</title>
-    <updated>2020-12-14T23:49:07.411Z</updated>
+    <updated>2020-12-14T23:56:51.026Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gjq-0625.github.io"/>
     <link rel="self" href="https://gjq-0625.github.io/atom.xml"/>
@@ -23,6 +23,25 @@ echo 'Test'.'<.br/>';
  "."这个符号是用来连接字符串的
 echo 'one';
 echo '<.br/>'; 
+?>*/
+<h2>2.当希望某个局部变量不要被删除时需要用到static修饰函数中的变量</h2>
+/*
+<?php
+function myTest(){
+static $x=0;
+echo $x;
+$x++;
+}
+*/
+/*
+myTest();
+//输出：0
+myTest();
+//输出：1
+myTest();
+//输出：2
+myTest();
+//输出：3
 ?>*/
 <h2>3.输出echo，print，print_r</h2>
 在 PHP 中有两个基本的输出方式： echo 和 print。
@@ -106,8 +125,8 @@ eg:/*&lt;?php<br>
 class MyClass<br>
 {<br>
 const constant = '常量值';</p>
-<pre><code> function showConstant() {
-    echo  self::constant . PHP_EOL;
+<pre><code>                    function showConstant() {
+                    echo  self::constant . PHP_EOL;
  }
 </code></pre>
 <p>}</p>
@@ -147,24 +166,6 @@ foo<br>
 <p>接口是通过 interface 关键字来定义的，就像定义一个标准的类一样，但其中定义所有的方法都是空的。</p>
 <p>接口中定义的所有方法都必须是公有，这是接口的特性。</p>
 <p>要实现一个接口，使用 implements 操作符。类中必须实现接口中定义的所有方法，否则会报一个致命错误。类可以实现多个接口，用逗号来分隔多个接口的名称</p>
-<h2>2.当希望某个局部变量不要被删除时需要用到static修饰函数中的变量</h2>
-/*
-<?
-php
-function myTest(){
-static $x=0;
-echo $x;
-$x++;
-}
-<p>myTest();<br>
-//输出：0<br>
-myTest();<br>
-//输出：1<br>
-myTest();<br>
-//输出：2<br>
-myTest();<br>
-//输出：3<br>
-?&gt;*/</p>
 ]]></content>
     </entry>
     <entry>
