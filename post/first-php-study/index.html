@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://gjq-0625.github.io/favicon.ico?v=1607784938715">
+<link rel="shortcut icon" href="https://gjq-0625.github.io/favicon.ico?v=1607936914978">
 <link rel="stylesheet" href="https://gjq-0625.github.io/styles/main.css">
 
 
@@ -32,7 +32,8 @@ echo 'one';
 echo ''; 
 ?>*/
 2.当希望某个局部变量不要被删除时需要用到static修饰函数中的变量
-/*functio..." />
+/*
+myTest..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -42,7 +43,7 @@ echo '';
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://gjq-0625.github.io">
-        <img src="https://gjq-0625.github.io/images/avatar.png?v=1607784938715" class="site-logo">
+        <img src="https://gjq-0625.github.io/images/avatar.png?v=1607936914978" class="site-logo">
         <h1 class="site-title">锦旗飘飘的私人笔记</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -117,12 +118,14 @@ echo 'one';
 echo '<.br/>'; 
 ?>*/
 <h2>2.当希望某个局部变量不要被删除时需要用到static修饰函数中的变量</h2>
-/*<?php
-<p>function myTest(){<br>
-static $x=0;<br>
-echo <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">x;
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">x</span><span class="mpunct">;</span></span></span></span>x++;<br>
-}</p>
+/*
+<?
+php
+function myTest(){
+static $x=0;
+echo $x;
+$x++;
+}
 <p>myTest();<br>
 //输出：0<br>
 myTest();<br>
