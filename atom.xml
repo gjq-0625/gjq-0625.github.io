@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gjq-0625.github.io</id>
     <title>锦旗飘飘的私人笔记</title>
-    <updated>2020-12-15T00:03:20.124Z</updated>
+    <updated>2020-12-15T00:25:35.966Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gjq-0625.github.io"/>
     <link rel="self" href="https://gjq-0625.github.io/atom.xml"/>
@@ -17,32 +17,25 @@
         </link>
         <updated>2020-12-11T04:55:30.000Z</updated>
         <content type="html"><![CDATA[<h2>1.换行时应该用</h2>
-/*<?php
-echo <.br/>;
-echo 'Test'.'<.br/>'; 
- "."这个符号是用来连接字符串的
-echo 'one';
-echo '<.br/>'; 
-?>*/
+<p>echo &quot;&lt;.br/&gt;&quot;;<br>
+echo 'Test'.' &lt;.br/&gt;';<br>
+&quot;.&quot;这个符号是用来连接字符串的<br>
+echo 'one';<br>
+echo &lt;.br/&gt;;</p>
 <h2>2.当希望某个局部变量不要被删除时需要用到static修饰函数中的变量</h2>
-/*
-<?php
-function myTest(){
-static $x=0;
-echo $x;
-$x++;
-}
-*/
-/*
-myTest();
-输出：0
-myTest();
-输出：1
-myTest();
-输出：2
-myTest();
-输出：3
-?>*/
+<p>function myTest(){<br>
+static $x=0;<br>
+echo <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">x;
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">x</span><span class="mpunct">;</span></span></span></span>x++;<br>
+}<br>
+myTest();<br>
+输出：0<br>
+myTest();<br>
+输出：1<br>
+myTest();<br>
+输出：2<br>
+myTest();<br>
+输出：3</p>
 <h2>3.输出echo，print，print_r</h2>
 在 PHP 中有两个基本的输出方式： echo 和 print。
 <p>本章节中我们会详细讨论两个语句的用法，并在实例中演示如何使用 echo 和 print。</p>
@@ -120,13 +113,12 @@ x !== y	不恒等	如果 x 不等于 y，则返回 true;
 <h2>8.constant,static</h2>
 1.在访问PHP类中的成员变量或方法时，如果被引用的变量或者方法被声明成const（定义常量）或者static（声明静态）,那么就必须使用操作符::,反之如果被引用的变量或者方法没有被声明成const或者static,那么就必须使用操作符->。
 <p>另外，如果从类的内部访问const或者static变量或者方法,那么就必须使用自引用的self，反之如果从类的内部访问不为const或者static变量或者方法,那么就必须使用自引用的$this。<br>
-(1)constant关键字<br>
-eg:/*&lt;?php<br>
-class MyClass<br>
+(1)constant关键字</p>
+<p>class MyClass<br>
 {<br>
 const constant = '常量值';</p>
-<pre><code>                    function showConstant() {
-                    echo  self::constant . PHP_EOL;
+<pre><code>            function showConstant() {
+            echo  self::constant . PHP_EOL;
  }
 </code></pre>
 <p>}</p>
@@ -135,11 +127,9 @@ const constant = '常量值';</p>
 echo $classname::constant . PHP_EOL; // 自 5.3.0 起</p>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mi>l</mi><mi>a</mi><mi>s</mi><mi>s</mi><mo>=</mo><mi>n</mi><mi>e</mi><mi>w</mi><mi>M</mi><mi>y</mi><mi>C</mi><mi>l</mi><mi>a</mi><mi>s</mi><mi>s</mi><mo>(</mo><mo>)</mo><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">class = new MyClass();
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mclose">)</span><span class="mpunct">;</span></span></span></span>class-&gt;showConstant();</p>
-<p>echo $class::constant . PHP_EOL; // 自 PHP 5.3.0 起<br>
-?&gt;<em>/<br>
-(2)static关键字<br>
-/</em>&lt;?php<br>
-class Foo {<br>
+<p>echo $class::constant . PHP_EOL; // 自 PHP 5.3.0 起</p>
+<p>(2)static关键字</p>
+<p>class Foo {<br>
 public static $my_static = 'foo';</p>
 <p>public function staticValue() {<br>
 return self::$my_static;<br>
@@ -148,11 +138,10 @@ return self::$my_static;<br>
 <p>print Foo::<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><msub><mi>y</mi><mi>s</mi></msub><mi>t</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>c</mi><mi mathvariant="normal">.</mi><mi>P</mi><mi>H</mi><msub><mi>P</mi><mi>E</mi></msub><mi>O</mi><mi>L</mi><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">my_static . PHP_EOL;
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">m</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault">c</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05764em;">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault">L</span><span class="mpunct">;</span></span></span></span>foo = new Foo();</p>
 <p>print $foo-&gt;staticValue() . PHP_EOL;<br>
-?&gt;	<br>
+////	<br>
 执行以上程序，输出结果为：</p>
 <p>foo<br>
-foo<br>
-*/</p>
+foo</p>
 <h2>9.抽象类</h2>
 任何一个类，如果它里面至少有一个方法是被声明为抽象的，那么这个类就必须被声明为抽象的。
 <p>定义为抽象的类不能被实例化。</p>
