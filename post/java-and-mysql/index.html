@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>关于 | 锦旗飘飘的私人笔记</title>
+<title>java and mysql | 锦旗飘飘的私人笔记</title>
 <meta name="description" content="温故而知新，可以为师矣">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -86,24 +86,31 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">关于</h2>
+          <h2 class="post-title">java and mysql</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2019-01-25</span>
+            <span><i class="icon-calendar-outline"></i> 2020-12-24</span>
             
           </div>
           <div class="post-content">
-            <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<h2 id="联系我呀">📬 联系我呀</h2>
+            <p>1、SQL注入，使用PreparedStatement时，是可以在SQL语句中，对值所在的位置使用?这种占位符的<br>
+* 使用占位符之后，实际的值，可以通过另外一份放在数组中的参数来代表。此时PreparedStatement会对<br>
+* 值做特殊的处理，往往特殊处理后，就会导致不法分子的恶意注入的SQL代码失效<br>
+* 2、提升性能，使用PreparedStatement之后，其实结构类似的SQL语句，都变成一样的了，因为值的地方<br>
+* 都会变成?，那么一条SQL语句，在MySQL中只会编译一次，后面的SQL语句过来，就直接拿编译后的执行计划<br>
+* 加上不同的参数直接执行，可以大大提升性能</p>
 
           </div>
         </div>
 
         
+          <div class="next-post">
+            <a class="purple-link" href="https://gjq-0625.github.io/post/first-php-study/">
+              <h3 class="post-title">
+                下一篇：php study 
+              </h3>
+            </a>
+          </div>
+          
       </div>
 
       

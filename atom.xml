@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gjq-0625.github.io</id>
     <title>锦旗飘飘的私人笔记</title>
-    <updated>2020-12-15T00:25:35.966Z</updated>
+    <updated>2020-12-24T00:39:10.246Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gjq-0625.github.io"/>
     <link rel="self" href="https://gjq-0625.github.io/atom.xml"/>
@@ -10,6 +10,20 @@
     <logo>https://gjq-0625.github.io/images/avatar.png</logo>
     <icon>https://gjq-0625.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 锦旗飘飘的私人笔记</rights>
+    <entry>
+        <title type="html"><![CDATA[java and mysql]]></title>
+        <id>https://gjq-0625.github.io/post/java-and-mysql/</id>
+        <link href="https://gjq-0625.github.io/post/java-and-mysql/">
+        </link>
+        <updated>2020-12-24T00:38:43.000Z</updated>
+        <content type="html"><![CDATA[<p>1、SQL注入，使用PreparedStatement时，是可以在SQL语句中，对值所在的位置使用?这种占位符的<br>
+* 使用占位符之后，实际的值，可以通过另外一份放在数组中的参数来代表。此时PreparedStatement会对<br>
+* 值做特殊的处理，往往特殊处理后，就会导致不法分子的恶意注入的SQL代码失效<br>
+* 2、提升性能，使用PreparedStatement之后，其实结构类似的SQL语句，都变成一样的了，因为值的地方<br>
+* 都会变成?，那么一条SQL语句，在MySQL中只会编译一次，后面的SQL语句过来，就直接拿编译后的执行计划<br>
+* 加上不同的参数直接执行，可以大大提升性能</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[php study ]]></title>
         <id>https://gjq-0625.github.io/post/first-php-study/</id>
