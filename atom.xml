@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gjq-0625.github.io</id>
     <title>锦旗飘飘的私人笔记</title>
-    <updated>2020-12-30T00:53:56.718Z</updated>
+    <updated>2020-12-30T00:57:24.609Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gjq-0625.github.io"/>
     <link rel="self" href="https://gjq-0625.github.io/atom.xml"/>
@@ -111,7 +111,7 @@ System.out.println(&quot;map = &quot;+map);//map = {b=2, c=3, a=1}<br>
 16.然后选择Artifact<img src="https://gjq-0625.github.io/post-images/1609286750786.png" alt="" loading="lazy"><br>
 17.然后点击Deployment出现  :war exploded就完成了<img src="https://gjq-0625.github.io/post-images/1609288782517.png" alt="" loading="lazy"><br>
 18.特别注意这个<img src="https://gjq-0625.github.io/post-images/1609288644367.png" alt="" loading="lazy"><br>
-和这个<img src="https://gjq-0625.github.io/post-images/1609289624248.png" alt="" loading="lazy"><br>
+和这个<img src="https://gjq-0625.github.io/post-images/1609289839598.png" alt="" loading="lazy"><br>
 然后就对了</p>
 ]]></content>
     </entry>
