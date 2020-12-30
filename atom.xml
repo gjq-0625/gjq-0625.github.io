@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gjq-0625.github.io</id>
     <title>锦旗飘飘的私人笔记</title>
-    <updated>2020-12-24T00:39:10.246Z</updated>
+    <updated>2020-12-30T00:10:01.037Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gjq-0625.github.io"/>
     <link rel="self" href="https://gjq-0625.github.io/atom.xml"/>
@@ -10,6 +10,58 @@
     <logo>https://gjq-0625.github.io/images/avatar.png</logo>
     <icon>https://gjq-0625.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 锦旗飘飘的私人笔记</rights>
+    <entry>
+        <title type="html"><![CDATA[idea配置tomcat(最新版idea2020.02)]]></title>
+        <id>https://gjq-0625.github.io/post/idea-pei-zhi-tomcatzui-xin-ban-idea202002/</id>
+        <link href="https://gjq-0625.github.io/post/idea-pei-zhi-tomcatzui-xin-ban-idea202002/">
+        </link>
+        <updated>2020-12-29T23:15:27.000Z</updated>
+        <content type="html"><![CDATA[<p>1.打开idea点击File New project<br>
+<img src="https://gjq-0625.github.io/post-images/1609284668263.jpg" alt="" loading="lazy"><br>
+2.新建一个Java工程<img src="https://gjq-0625.github.io/post-images/1609284675630.jpg" alt="" loading="lazy"><br>
+3.给project起名字<img src="https://gjq-0625.github.io/post-images/1609284682578.jpg" alt="" loading="lazy"><br>
+4.右击新建的工程 点击Add Framework Support<img src="https://gjq-0625.github.io/post-images/1609284686725.jpg" alt="" loading="lazy"><br>
+5.勾选java EE Web Application<img src="https://gjq-0625.github.io/post-images/1609284692191.jpg" alt="" loading="lazy"><br>
+6.点击run Edit Configurations<img src="https://gjq-0625.github.io/post-images/1609285131448.png" alt="" loading="lazy"><br>
+7.然后点击加号找<img src="https://gjq-0625.github.io/post-images/1609285407696.png" alt="" loading="lazy"><br>
+8.正常的话就应该是这一步<img src="https://gjq-0625.github.io/post-images/1609285171712.png" alt="" loading="lazy"><br>
+9.如果出现这个警告<img src="https://gjq-0625.github.io/post-images/1609285486433.jpg" alt="" loading="lazy"><br>
+10.然后新建Modules，右键点击新建的工程，选择Add勾选Web<img src="https://gjq-0625.github.io/post-images/1609285708916.png" alt="" loading="lazy"><br>
+11.然后它会默认Path的值这是正确的不用修改,但是Web Resource Directories位置一般不对应该修改为你创建的project下的index.jsp路径<img src="https://gjq-0625.github.io/post-images/1609285932000.png" alt="" loading="lazy"><br>
+12.然后选Artifacts 添加 Web application:Exploded 选择 From Modules然后点击OK即可<img src="https://gjq-0625.github.io/post-images/1609285981648.png" alt="" loading="lazy"><br>
+13.然后点击run找到Edit Configurations<img src="https://gjq-0625.github.io/post-images/1609286175734.png" alt="" loading="lazy"><br>
+14.然后点击加号找到Tomcat Server<img src="https://gjq-0625.github.io/post-images/1609286320795.png" alt="" loading="lazy"><br>
+15.点击Configure找到自己的tomcat版本路径,在After launch找到已经安装好的浏览器<img src="https://gjq-0625.github.io/post-images/1609286388392.png" alt="" loading="lazy"><br>
+16.然后选择Artifact<img src="https://gjq-0625.github.io/post-images/1609286750786.png" alt="" loading="lazy"><br>
+17.特别注意这两者之间要保持一致<img src="https://gjq-0625.github.io/post-images/1609286980212.png" alt="" loading="lazy">然后就对了</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[BootStrap]]></title>
+        <id>https://gjq-0625.github.io/post/bootstrap/</id>
+        <link href="https://gjq-0625.github.io/post/bootstrap/">
+        </link>
+        <updated>2020-12-26T02:10:02.000Z</updated>
+        <content type="html"><![CDATA[<p>1.简介<br>
+基于HTML、CSS、JavaScript 开发的简洁、直观、强悍的前端开发框架，使得 Web 开发更加快捷。<br>
+自适应页面，页面会根据窗口宽度动态的发生变化<br>
+一个前端框架，规定好了大量的各式各样的样式我们可以直接去使用<br>
+Bootstrap 是最受欢迎的 HTML、CSS 和 JS 框架，用于开发响应式布局、移动设备优先的 WEB 项目。<br>
+直接使用 Bootstrap 提供的 CSS 样式表<br>
+2.快速入门</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JavaScript]]></title>
+        <id>https://gjq-0625.github.io/post/javascript/</id>
+        <link href="https://gjq-0625.github.io/post/javascript/">
+        </link>
+        <updated>2020-12-26T00:08:20.000Z</updated>
+        <content type="html"><![CDATA[<p>1.onclick属性用于给当前div元素绑定单击事件，当单击div范围后，会立即出发点击单击事件，执行showdate<br>
+2.document.getElementById(id的值)-通过元素的id获取一个元素js对象<br>
+3.js对象.innerHTML-获取元素内部的所有内容/修改元素内部的内容</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[java and mysql]]></title>
         <id>https://gjq-0625.github.io/post/java-and-mysql/</id>
