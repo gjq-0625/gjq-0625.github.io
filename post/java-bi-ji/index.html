@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>java笔记 | 锦旗飘飘的私人笔记</title>
+<meta name="description" content="温故而知新，可以为师矣">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://gjq-0625.github.io/favicon.ico?v=1609289248240">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://gjq-0625.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://gjq-0625.github.io">
+        <img class="avatar" src="https://gjq-0625.github.io/images/avatar.png?v=1609289248240" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://gjq-0625.github.io">
+        <h1 class="site-title">锦旗飘飘的私人笔记</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">java笔记</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-12-30</span>
+            
+          </div>
+          <div class="post-content">
+            <p>1.子类只能调用父类的构造方法，不能继承。<br>
+2.访问权限由高到低，public,protected,default.<br>
+3.类中权限默认是default.<br>
+4.子类可以隐藏从父类继承的成员变量和方法，如果在子类中想使用被子类隐藏的成员变量或方法，可以使用关键字super;<br>
+5.抽象类中可以有抽象方法，也可以有构造方法及其他修饰符修饰的方法<br>
+6.用final修饰的方法在子类中不能进行重写，但是用abstract修饰的方法要求子类必须对这个方法进行重写。<br>
+7.接口中的方法可以是抽象方法，静态方法，和default方法，private无protected。<br>
+8.接口中只能有常量，不能有变量，接口中的常量必须是public static final修饰并且必须赋值<br>
+9.接口中可以实现方法，也可以使用空方法，但是在实现接口中的方法时返回值和参数必须和接口中一样<br>
+10.重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。即外壳不变，核心重写！<br>
+重载(overloading) 是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。<br>
+11.final不能有子类但是可以有父类。<br>
+12.用static声名方法表明这个方法在不生成类的实例时可直接被类调用,而abstract方法不能被调用<br>
+13.接口中的抽象方法默认时public的，但是抽象类的抽象方法时default修饰的，降低了访问权限，所以是不对的<br>
+14.new的对象是谁，优先用谁，优先调用中的成员方法。<br>
+15.子类上转型后，如果重写了父类中的方法，优先调用子类重写后的方法，子类中没有的则调用父类的方法</p>
+<p>16.接口：包括一组容器接口，定义了容器中的元素允许进行的合法操作，不涉及具体的实现，常见的有Collection、List、Set、Map等，主要分为两大分支：<br>
+Collection分支：存储管理无依赖关系的一组对象<br>
+Map分支：以键值对形式存储和管理数据<br>
+实现类：上述容器接口的实现类，对接口中的方法提供具体的实现，<br>
+常见的有ArrayList、HashSet、HashTable、HashMap等<br>
+算法：对集合中存储的元素对象提供遍历、排序等操作，常见的有Iterator、Comparator等</p>
+<p>17.Set接口：<br>
+与Collection接口方法基本一致，提供了以无序的方式存取不重复的数据。</p>
+<p>18List接口：<br>
+扩展了Collection接口的功能，提供了以索引号方式顺序存取数据的方式。<br>
+Java中list、set、map的输出格式<br>
+Java中的集合主要有list、set、map三种。其输出格式也不全相同，直接输出这个集合对象，测试代码个输出如下所示。</p>
+<ol start="19">
+<li></li>
+</ol>
+<p>import java.util.ArrayList;<br>
+import java.util.HashMap;<br>
+import java.util.HashSet;</p>
+<p>public class Test {</p>
+<p>public static void main(String[] args) {<br>
+/<em>1. List</em>/<br>
+ArrayList<Integer> list = new ArrayList<Integer>();<br>
+for(int i=0;i&lt;20;i++){<br>
+list.add(i);<br>
+}<br>
+for(int i=15;i&lt;25;i++){//重复的元素会被再次插入<br>
+list.add(i);<br>
+}<br>
+/<em>按照插入的顺序输出，多次试验输出结果都是按照插入的顺序</em>/<br>
+System.out.println(&quot;list = &quot;+list);//输出格式如list = [1, 2, 3, 4,]</p>
+<p>/<em>2. Set</em>/<br>
+HashSet<Integer> set = new HashSet<Integer>();<br>
+for(int i=0;i&lt;20;i++){<br>
+set.add(i);<br>
+}<br>
+for(int i=15;i&lt;25;i++){//重复的元素不会被再次插入<br>
+set.add(i);<br>
+}<br>
+/<em>不是按照插入的顺序输出，多次试验输出结果都是可能不同</em>/<br>
+System.out.println(&quot;set = &quot;+set);//set = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 16, 19, 18, 21, 20, 23, 22, 24]</p>
+<p>/<em>3. Map</em>/<br>
+HashMap&lt;Character,Integer&gt; map = new HashMap&lt;Character,Integer&gt;();<br>
+map.put('a', 1);<br>
+map.put('b', 2);<br>
+map.put('c', 3);<br>
+/<em>输出的时候不是按照插入的顺序，所以多次运行输出的结果可能不一样</em>/<br>
+System.out.println(&quot;map = &quot;+map);//map = {b=2, c=3, a=1}<br>
+}</p>
+<p>}</p>
+<p>20.Key对象唯一不重复，value对象允许重复在MAP中<br>
+21.HashMap类 key对象必须实现hashCode()和equals()方法<br>
+22.如果我们自己定义的一个类的对象要加入到TreeSet当中，那么这个类必须要实现Comparable接口。</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://gjq-0625.github.io/post/idea-pei-zhi-tomcatzui-xin-ban-idea202002/">
+              <h3 class="post-title">
+                下一篇：idea配置tomcat(最新版idea2020.02)
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan">温故而知新，可以为师矣</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://gjq-0625.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '4c5bf8dd14140afde155',
+        clientSecret: 'You need a client secret to authenticate as the application to the API.',
+        repo: 'gjq-0625.github.io',
+        owner: 'gjq-0625',
+        admin: ['gjq-0625'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
